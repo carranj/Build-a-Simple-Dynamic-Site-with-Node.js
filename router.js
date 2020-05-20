@@ -37,7 +37,7 @@ function user(request, response){
                 javascriptPoints:profileJSON.points.JavaScript
             }
             //Simple response
-            response.write(`${values.username} has ${values.badges} badges \n`);
+            response.write(`${values.username} has ${values.badges} badges\n`);
             response.end("Footer\n");
         });
          //on "error"
