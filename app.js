@@ -2,6 +2,15 @@
 //Solution: Use Node.js to perform the profile look ups and serve our template via HTTP
 
 // 1. Create a web server
+var http = require('http');
+http.createServer(function(request, response){
+    response.writeHead(200, {'Content-Type':'text/plain'});
+    setInterval(function(){
+        response.write(new Date() + "\n")
+    },1000)
+
+}).listen(3000);
+console.log('Server running on port 3000');
 
 // 2. Handle HTTP route GET / and POST / i.e. Home
     //if url === "/" && GET
