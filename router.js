@@ -23,7 +23,7 @@ function home(request, response){
                 //extract the username
                 var query = queryString.parse(postBody.toString());
                 //redirect to /:username
-                response.write(query.username)
+                response.writeHead(303, {"Location":`/${query.username}`})
                 response.end();
             });
             
